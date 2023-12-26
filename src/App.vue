@@ -12,11 +12,12 @@
             <router-link class="nav-link" to="/">Home <span class="sr-only"></span></router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/ContactPage">Contact</router-link>
-          </li>
-          <li class="nav-item">
             <router-link class="nav-link" to="/projects">Projects</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/ContactPage">Contact</router-link>
+          </li>
+         
         </ul>
 
         
