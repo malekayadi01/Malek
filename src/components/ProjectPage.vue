@@ -46,7 +46,7 @@ export default {
           id: 4,
           title: "ArtyProd",
           description: "Application pour une agence de design",
-          link: "lien_vers_github_projet_3",
+          link: "https://github.com/malekayadi01/artyprod",
           image: require('@/assets/design.jpg'), 
         },
        
