@@ -1,5 +1,3 @@
-// src/router/index.js
-
 import { createRouter, createWebHistory } from 'vue-router';
 import MainHome from '@/components/MainHome.vue';
 import ContactPage from '@/components/ContactPage.vue';

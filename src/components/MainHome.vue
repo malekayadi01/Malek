@@ -1,6 +1,3 @@
-User
-<!-- src/components/Home.vue -->
-
 <template>
   <div class="home-container">
     <h1>Bienvenue sur Mon Portfolio</h1><br>
@@ -24,7 +21,7 @@ User
 </template>
 
 <style scoped>
-/* Styles spécifiques à la page d'accueil */
+
 
 .home-container {
   max-width: 800px;

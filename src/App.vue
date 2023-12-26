@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">TEKAB</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,7 +19,7 @@
           </li>
         </ul>
 
-        <!-- Dark Mode Toggle Button -->
+        
         <button @click="toggleDarkMode" class="btn btn-outline-info my-2 my-sm-0">
           <i :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
         </button>
@@ -70,11 +70,11 @@ export default {
 </script>
 
 <style>
-/* Global styles */
+
 :root {
-  --primary-bg-color: #fff;  /* Light mode background color */
-  --secondary-bg-color: #252934;  /* Dark mode background color */
-  --text-color: #252934;  /* Text color for both light and dark mode */
+  --primary-bg-color: #fff;  
+  --secondary-bg-color: #252934; 
+  --text-color: #252934;  
 }
 
 body {
@@ -83,27 +83,27 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark mode styles */
+
 body.dark-mode {
   background-color: var(--secondary-bg-color);
-  color: #fff;  /* Text color for dark mode */
+  color: #fff;  
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin-bottom: 50px; /* Add margin at the bottom for spacing */
+  margin-bottom: 50px; 
 }
 
 .input-group {
-  margin-right: 10px; /* Adjust as needed */
+  margin-right: 10px; 
 }
 
 .navbar-nav {
-  margin-right: 20px; /* Add margin between the links and the dark mode button */
+  margin-right: 20px; 
 }
 .navbar-nav .nav-item {
-  margin-right: 15px; /* Add margin between the nav items */
+  margin-right: 15px; 
 }
 </style>

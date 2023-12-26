@@ -1,5 +1,3 @@
-// src/main.js
-// main.js
 import 'bootstrap/dist/css/bootstrap.css';
 
 import { createApp } from 'vue';

@@ -1,5 +1,3 @@
-<!-- src/components/Projects.vue -->
-
 <template>
   <div class="container">
     <h1>Mes Projets</h1>
@@ -25,46 +23,40 @@ export default {
       projects: [
         {
           id: 1,
-          title: "Projet 1",
-          description: "Description du projet 1.",
-          link: "lien_vers_github_projet_1",
-          image: "https://mdbootstrap.com/img/Photos/Others/images/43.webp",
+          title: "PixiAuth",
+          description: "Stage de Perfectionnement",
+          link: "https://www.piximind.com/fr",
+          image: require('@/assets/logo1.png'), 
         },
         {
           id: 2,
-          title: "Projet 2",
-          description: "Description du projet 2.",
-          link: "lien_vers_github_projet_2",
-          image: "URL_de_l_image_2",
+          title: "Cv",
+          description: "Application mobile Porfloi",
+          link: "https://github.com/malekayadi01/projectcv---Copie",
+          image: require('@/assets/cv.png'), 
         },
         {
           id: 3,
-          title: "Projet 3",
-          description: "Description du projet 3.",
-          link: "lien_vers_github_projet_3",
-          image: "URL_de_l_image_3",
+          title: "Gestion facture et reglement",
+          description: "Application web angluar et spring boot ",
+          link: "https://github.com/AlphaDrk/SOA",
+          image: require('@/assets/fac.png'), 
         },
         {
           id: 4,
-          title: "Projet 4",
-          description: "Description du projet 4.",
-          link: "lien_vers_github_projet_4",
-          image: "URL_de_l_image_4",
+          title: "ArtyProd",
+          description: "Application pour une agence de design",
+          link: "lien_vers_github_projet_3",
+          image: require('@/assets/design.jpg'), 
         },
+       
         {
           id: 5,
-          title: "Projet 5",
-          description: "Description du projet 5.",
-          link: "lien_vers_github_projet_5",
-          image: "URL_de_l_image_5",
+          title: "E-Commerce",
+          description: "Application web E-commerce ",
+          image: require('@/assets/e-commerce.png'), 
         },
-        {
-          id: 6,
-          title: "Projet 6",
-          description: "Description du projet 6.",
-          link: "lien_vers_github_projet_6",
-          image: "URL_de_l_image_6",
-        },
+      
       ],
     };
   },
@@ -72,13 +64,12 @@ export default {
 </script>
 
 <style scoped>
-/* Styles spécifiques à la section Projets */
-/* Vous pouvez ajouter des styles personnalisés pour vos cartes ici */
+
 .card {
-  margin-bottom: 20px; /* Ajustez l'espacement entre les cartes */
+  margin-bottom: 20px; 
 }
 
 .container {
-  margin-bottom: 20px; /* Ajustez l'espacement en bas du conteneur */
+  margin-bottom: 20px; 
 }
 </style>

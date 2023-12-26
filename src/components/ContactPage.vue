@@ -1,5 +1,3 @@
-<!-- src/components/Contact.vue -->
-
 <template>
   <div>
     <h1>Me Contacter</h1>
@@ -35,7 +33,7 @@ export default {
   },
   methods: {
     submitForm() {
-      // Utiliser un Worker de Cloudflare ou un service tel que Formspree pour envoyer le formulaire.
+     
       console.log("Formulaire soumis :", this.form);
     },
   },
@@ -43,7 +41,7 @@ export default {
 </script>
 
 <style scoped>
-/* Styles spécifiques à la section Contact */
+
 
 h1 {
   font-size: 2.5rem;
