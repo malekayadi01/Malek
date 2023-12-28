@@ -32,14 +32,32 @@ export default {
     };
   },
   methods: {
-    submitForm() {
-     
-      console.log("Formulaire soumis :", this.form);
+    async submitForm() {
+      try {
+        const response = await fetch('https://formspree.io/f/xvoeopnq', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(this.form),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to submit form');
+        }
+
+        console.log('Form submitted successfully!');
+        this.form.name = "";
+        this.form.email = "";
+        this.form.subject = "";
+        this.form.message = "";
+      } catch (error) {
+        console.error('Error submitting form:', error.message);
+      }
     },
   },
 };
 </script>
-
 <style scoped>
 
 
