@@ -1,8 +1,11 @@
 <template>
   <div class="container">
     <h1>Mes Projets</h1>
+    <div class="search-bar">
+      <input v-model="searchTerm" @input="performSearch" placeholder="Rechercher par titre..." />
+    </div>
     <div class="row">
-      <div v-for="project in projects" :key="project.id" class="col-md-4 mb-4">
+      <div v-for="project in filteredProjects" :key="project.id" class="col-md-4 mb-4">
         <div class="card">
           <img class="card-img-top" :src="project.image" alt="Card image cap">
           <div class="card-body">
@@ -49,19 +52,38 @@ export default {
           link: "https://github.com/malekayadi01/artyprod",
           image: require('@/assets/design.jpg'), 
         },
-       
         {
           id: 5,
           title: "E-Commerce",
           description: "Application web E-commerce ",
           image: require('@/assets/e-commerce.png'), 
         },
-      
       ],
+      searchTerm: "",
     };
+  },
+  computed: {
+    filteredProjects() {
+      const searchTerm = this.searchTerm.toLowerCase();
+      return this.projects.filter(project =>
+        project.title.toLowerCase().includes(searchTerm)
+      );
+    },
+  },
+  methods: {
+    async performSearch() {
+      try {
+        const response = await fetch(`https://worker-withered-violet-c102.malekaydi.workers.dev/search?term=${this.searchTerm}`);
+        const data = await response.json();
+        this.projects = data.projects;
+      } catch (error) {
+        console.error('Error performing search:', error.message);
+      }
+    },
   },
 };
 </script>
+
 
 <style scoped>
 

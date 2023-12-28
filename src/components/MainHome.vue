@@ -75,7 +75,7 @@ export default {
 .sm-text {
   letter-spacing: 2.1px;
   font-weight: normal;
-  color: var(--text-color); /* Use CSS variable for text color */
+  color: var(--text-color); 
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -85,7 +85,7 @@ export default {
   font-size: 40px;
   text-transform: uppercase;
   margin: 15px 0px;
-  color: var(--text-color); /* Use CSS variable for text color */
+  color: var(--text-color); 
   font-family: "Roboto", sans-serif;
   font-weight: 600;
 }
@@ -96,12 +96,12 @@ export default {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: var(--text-color); /* Use CSS variable for text color */
+  color: var(--text-color); 
 }
 
 .text {
   font-size: 15px;
-  color: var(--text-color); /* Use CSS variable for text color */
+  color: var(--text-color); 
 }
 
 .pr-list {
@@ -122,7 +122,7 @@ export default {
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 1.8;
-  color: var(--text-color); /* Use CSS variable for text color */
+  color: var(--text-color); 
 }
 
 .pg-sub-title {
@@ -152,7 +152,6 @@ export default {
   background-color: #2980b9;
 }
 
-/* Define CSS variables for light and dark mode */
 :root {
   --text-color-light: #222222;
   --text-color-dark: #ffffff;
