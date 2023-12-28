@@ -88,10 +88,11 @@ export default {
 <style scoped>
 
 .card {
-  margin-bottom: 20px; 
+  margin-top: 20px;
 }
 
 .container {
-  margin-bottom: 20px; 
+  margin-top: 20px;
 }
+
 </style>

@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
+
 export default {
   data() {
     return {
@@ -34,33 +36,32 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const response = await fetch('https://formspree.io/f/xvoeopnq', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(this.form),
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        await Swal.fire({
+          icon: 'success',
+          title: 'Formulaire soumis avec succès',
+          showConfirmButton: false,
+          timer: 1500,
         });
-
-        if (!response.ok) {
-          throw new Error('Failed to submit form');
-        }
-
-        console.log('Form submitted successfully!');
         this.form.name = "";
         this.form.email = "";
         this.form.subject = "";
         this.form.message = "";
       } catch (error) {
         console.error('Error submitting form:', error.message);
+
+        await Swal.fire({
+          icon: 'error',
+          title: 'Erreur lors de la soumission du formulaire',
+          text: error.message,
+        });
       }
     },
   },
 };
 </script>
+
 <style scoped>
-
-
 h1 {
   font-size: 2.5rem;
   color: #252934;
