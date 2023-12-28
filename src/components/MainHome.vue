@@ -12,7 +12,7 @@
       <router-link to="/skills" class="nav-link">Découvrir mes Compétences</router-link>
       <font-awesome-icon icon="fa-solid fa-user-secret" />
       <router-link to="/ContactPage" class="nav-link">Me Contacter</router-link>
-      <a href="@/assets/cv.pdf" download class="nav-link">Télécharger mon CV</a>
+      <a href="https://worker-dark-paper-8916.malekaydi.workers.dev/download-pfe" download class="nav-link">Télécharger mon CV</a>
     </div>
 
     
@@ -81,4 +81,3 @@ h2 {
 }
 </style>
 
-les incons ne se affiche pas
