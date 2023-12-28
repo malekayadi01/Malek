@@ -1,5 +1,0 @@
-name = "tekab"
-type = "typescript"
-account_id = "0cfdad02481282dbb7e38c541a4464a8"
-workers_dev = true
-main = "worker.js"

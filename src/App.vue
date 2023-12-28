@@ -15,7 +15,7 @@
               <router-link class="nav-link" to="/projects">Projects</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/skills">Skills</router-link>
+              <router-link class="nav-link" to="/skills">Compétences</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/ContactPage">Contact</router-link>

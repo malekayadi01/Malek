@@ -64,7 +64,7 @@ export default {
 <style scoped>
 h1 {
   font-size: 2.5rem;
-  color: #252934;
+  color: var(--text-color); 
 }
 
 .contact-form {
@@ -76,7 +76,7 @@ label {
   display: block;
   margin-top: 10px;
   font-size: 1rem;
-  color: #252934;
+  color: var(--text-color); 
 }
 
 input,
@@ -88,6 +88,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color: var(--text-color); 
 }
 
 button {
@@ -103,5 +104,17 @@ button {
 
 button:hover {
   background-color: #252934;
+}
+:root {
+  --text-color-light: #222222;
+  --text-color-dark: #ffffff;
+}
+
+body.dark-mode {
+  --text-color: var(--text-color-dark);
+}
+
+body:not(.dark-mode) {
+  --text-color: var(--text-color-light);
 }
 </style>

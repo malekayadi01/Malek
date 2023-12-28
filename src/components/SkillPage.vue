@@ -1,21 +1,18 @@
 <template>
-    <div class="container">
-      <h1>Mes Compétences</h1>
-  
-      <div class="card-deck">
-        <div v-for="skill in skills" :key="skill.id" class="card">
-          <img :src="skill.image" class="card-img-top skill-image" alt="Skill Image">
-          <div class="card-body">
-            <h5 class="card-title">{{ skill.name }}</h5>
-            <div class="progress">
-              <div class="progress-bar" :style="{ width: skill.level + '%' }"></div>
-            </div>
-            <p class="card-text">{{ skill.description }}</p>
-          </div>
+
+    <div class="cards-wrapper">
+      <div v-for="skill in skills" :key="skill.id" class="card-grid-space">
+        <div class="card" :style="{ '--bg-img': 'url(' + skill.image + ')' }">
         </div>
+          <div>
+            <h1>{{ skill.name }}</h1>
+          </div>
+       
       </div>
     </div>
-  </template>
+  
+</template>
+
 
 <script>
 export default {
@@ -27,35 +24,35 @@ export default {
           name: 'Vue Js',
           level: 90,
         
-          image: require('@/assets/logo.png'), 
+          image: require('@/assets/VueJs.png'), 
         },
         {
           id: 2,
           name: 'React Js',
           level: 85,
          
-          image: require('@/assets/l3.png'), 
+          image: require('@/assets/react.png'), 
         },
         {
           id: 3,
           name: 'Angular',
           level: 80,
     
-          image: require('@/assets/l4.png'), 
+          image: require('@/assets/angular.png'), 
         },
         {
           id: 4,
           name: 'Java ',
           level: 75,
 
-          image: require('@/assets/l5.png'), 
+          image: require('@/assets/java.png'), 
         },
         {
           id: 5,
           name: 'Spring Boot',
           level: 70,
     
-          image: require('@/assets/l6.png'), 
+          image: require('@/assets/spring.png'), 
         }, {
           id: 6,
           name: 'Flutter',
@@ -67,13 +64,13 @@ export default {
           name: 'Node js',
           level: 70,
 
-          image: require('@/assets/l7.png'), 
+          image: require('@/assets/node.png'), 
         },
         {
           id: 8,
           name: 'Nest js',
           level: 70,
-          image: require('@/assets/l8.png'), 
+          image: require('@/assets/nest.png'), 
         },
     
       ],
@@ -81,34 +78,57 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 
-.card-deck {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+:root {
+  --transition-time: 0.5s;
+  --bg-img: none;
+  --text-color-light: #222222;
+  --text-color-dark: #ffffff;
+}
+h1 {
+  color: var(--text-color); 
+}
+
+body.dark-mode {
+  --text-color: var(--text-color-dark);
+}
+
+body:not(.dark-mode) {
+  --text-color: var(--text-color-light);
+}
+.cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
 }
 
 .card {
-  width: 18rem;
-  margin-bottom: 20px;
-}
-
-.skill-image {
-  width: 100%; 
-  height: 100%;
-}
-
-.progress {
-  height: 20px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
+  
+  color: var(--text-color); 
+  background-image: var(--bg-img);
+  height: 20em;
+  width: 15em;
+  font-size: 1.5em;
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   overflow: hidden;
+
 }
 
-.progress-bar {
-  height: 100%;
-  background-color: #007bff;
-}
+
+
+
 </style>
+

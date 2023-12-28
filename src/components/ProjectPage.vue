@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Mes Projets</h1>
+    <h1 class="title">Mes Projets</h1>
     <div class="search-bar">
       <input v-model="searchTerm" @input="performSearch" placeholder="Rechercher par titre..." />
     </div>
@@ -94,5 +94,7 @@ export default {
 .container {
   margin-top: 20px;
 }
-
+.title{
+  color: #0DCAF0;
+}
 </style>
