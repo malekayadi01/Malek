@@ -1,83 +1,168 @@
 <template>
-  <div class="home-container">
-    <h1>Bienvenue sur Mon Portfolio</h1><br>
-    <div class="intro-section">
-      <img src="../assets/malek.jpg" alt="Votre Nom" class="profile-image" />
-      <p>Malek Ben Ayedi <br> <br>étudiant en 3éme année licence en technologie d'informatique (développement des systèmes d'informatique) à l'institut supérieure des études technologies de Sfax (ISET SFAX), Je suis dynamique, favorisant le travail en groupe pour développer constamment mes compétences et grandir professionnellement.
-</p>
+  <div class="wraper">
+    <div class="container">
     </div>
-    <div class="explore-section">
-      <h2>Explorez mon Portfolio</h2>
-      <router-link to="/projects" class="nav-link">Voir mes Projets</router-link>
-      <router-link to="/skills" class="nav-link">Découvrir mes Compétences</router-link>
-      <font-awesome-icon icon="fa-solid fa-user-secret" />
-      <router-link to="/ContactPage" class="nav-link">Me Contacter</router-link>
-      <a href="https://worker-dark-paper-8916.malekaydi.workers.dev/download-pfe" download class="nav-link">Télécharger mon CV</a>
+    <div class="main-content">
+      <div class="section1 p-30" id="Home">
+        <div class="sec-title">
+          <div class="pg-title">Mon Portfolio</div>
+        </div>
+        <div class="d-flex-align-center">
+          <div class="user-img flex-1"><img src="../assets/profile.jpg" alt="User" class="small-image"></div>
+          <div class="user-profile flex-1">
+            <div class="pro-details">
+              <div class="name">Malek Ben Ayedi</div>
+            </div>
+            <div class="text">étudiant en 3éme année licence en technologie d'informatique (développement des systèmes d'informatique) <br>à l'institut supérieure des études technologies de Sfax (ISET SFAX), <br> Je suis dynamique, favorisant le travail en groupe pour développer constamment mes compétences et grandir professionnellement</div>
+            
+            <a href="https://worker-dark-paper-8916.malekaydi.workers.dev/download-pfe" download class="download-button">Télécharger mon CV</a>
+            <div class="pr-list">
+              <ul>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i> 13 October, 2002</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>+216 22158003</li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i> malekayadi01@gmail.com</li>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Sfax,Tunisie</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    
   </div>
-
 </template>
+<script>
 
+export default {
+};
+</script>
 <style scoped>
-
-
-.home-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+.wraper {
+  width: 100%;
+  height: 100%;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #252934;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.intro-section {
-  margin-bottom: 20px;
-}
-
-.profile-image {
+.left-content {
   width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #6366F1;
+  overflow-y: auto;
+  height: 100%;
+  border-right: 1px solid rgba(221, 221, 221, 0.38);
+  display: flex;
+  flex-direction: column;
 }
 
-p {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.2rem;
-  color: #6366F1;
-  margin-top: 10px;
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  margin-left: 10px;
+  border-left: 1px solid rgba(221, 221, 221, 0.38);
 }
 
-.explore-section {
-  margin-top: 20px;
+.user-profile {
+  padding-left: 50px;
 }
 
-h2 {
-  font-size: 1.8rem;
-  color: #252934;
+.user-img img.small-image {
+  width: 300px; 
+  height: auto;
+}
+
+.sm-text {
+  letter-spacing: 2.1px;
+  font-weight: normal;
+  color: var(--text-color); /* Use CSS variable for text color */
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  color: var(--text-color); /* Use CSS variable for text color */
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.role {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--text-color); /* Use CSS variable for text color */
+}
+
+.text {
+  font-size: 15px;
+  color: var(--text-color); /* Use CSS variable for text color */
+}
+
+.pr-list {
+  margin: 30px 0px;
+}
+
+.pr-list ul li {
+  margin-bottom: 8px;
+}
+
+.sec-title {
+  margin-bottom: 50px;
+}
+
+.pg-title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  color: var(--text-color); /* Use CSS variable for text color */
+}
+
+.pg-sub-title {
   margin-bottom: 10px;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: 500;
+  letter-spacing: 5px;
 }
 
-.nav-link {
+.download-button {
   display: inline-block;
-  margin: 5px;
-  padding: 10px 20px;
+  margin-top: 10px;
+  padding: 10px 10px;
+  background-color: #3498db;
+  color: #fff;
   text-decoration: none;
-  color: #fafafa;
-  background-color: #6366F1;
   border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.nav-link:hover {
-  background-color: #252934;
+.download-button:hover {
+  background-color: #2980b9;
+}
+
+/* Define CSS variables for light and dark mode */
+:root {
+  --text-color-light: #222222;
+  --text-color-dark: #ffffff;
+}
+
+body.dark-mode {
+  --text-color: var(--text-color-dark);
+}
+
+body:not(.dark-mode) {
+  --text-color: var(--text-color-light);
 }
 </style>
-

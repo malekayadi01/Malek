@@ -1,0 +1,40 @@
+body.dark-mode {
+    --text-color: #fff;
+  }
+  
+  :root {
+    --primary-bg-color: #fff;  
+    --secondary-bg-color: #252934; 
+    --text-color: #252934;  
+  }
+  
+  body {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: var(--secondary-bg-color);
+    color: #fff;  
+  }
+  
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 50px; 
+  }
+  
+  .input-group {
+    margin-right: 10px; 
+  }
+  
+  .navbar-nav {
+    margin-right: 20px; 
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 15px; 
+  }
+  
