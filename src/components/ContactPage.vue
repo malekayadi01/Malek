@@ -35,28 +35,38 @@ export default {
   },
   methods: {
     async submitForm() {
-      try {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        await Swal.fire({
-          icon: 'success',
-          title: 'Formulaire soumis avec succès',
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        this.form.name = "";
-        this.form.email = "";
-        this.form.subject = "";
-        this.form.message = "";
-      } catch (error) {
-        console.error('Error submitting form:', error.message);
+  try {
+    await fetch('https://formspree.io/f/xvoeopnq', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.form),
+    });
 
-        await Swal.fire({
-          icon: 'error',
-          title: 'Erreur lors de la soumission du formulaire',
-          text: error.message,
-        });
-      }
-    },
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    await Swal.fire({
+      icon: 'success',
+      title: 'Formulaire soumis avec succès',
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
+    this.form.name = "";
+    this.form.email = "";
+    this.form.subject = "";
+    this.form.message = "";
+  } catch (error) {
+    console.error('Error submitting form:', error.message);
+
+    await Swal.fire({
+      icon: 'error',
+      title: 'Erreur lors de la soumission du formulaire',
+      text: error.message,
+    });
+  }
+},
   },
 };
 </script>
